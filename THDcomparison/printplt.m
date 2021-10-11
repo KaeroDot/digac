@@ -14,6 +14,6 @@ function printplt(filename)
         % print plot to plt:
         drawnow ('postscript', "/dev/null", [filename '.plt'])
 
-endfunction
+end
 
-% vim settings modeline: vim: foldmarker=%<<<,%>>> fdm=marker fen ft=octave textwidth=1000
+% vim settings modeline: vim: foldmarker=%<<<,%>>> fdm=marker fen ft=matlab textwidth=1000

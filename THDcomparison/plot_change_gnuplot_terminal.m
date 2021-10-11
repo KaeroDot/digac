@@ -6,6 +6,6 @@ function plot_change_gnuplot_terminal(directory)
         msg = ['find "' directory '" -name "*.plt" -print0 | xargs -0 sed -i ' char(39) 's/terminal postscript.* dashlength/terminal wxt enhanced size 560,420 dashlength/g' char(39)]
         system(msg);
 
-endfunction
+end
 
-% vim modeline: vim: foldmarker=%<<<,%>>> fdm=marker fen ft=octave textwidth=1000
+% vim modeline: vim: foldmarker=%<<<,%>>> fdm=marker fen ft=matlab textwidth=1000

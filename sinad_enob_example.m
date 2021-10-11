@@ -74,4 +74,4 @@ hold on
 plot(xlim, -1.*[distortion_dB distortion_dB], '-')
 legend('calculated SINAD','real value')
 
-% vim settings modeline: vim: foldmarker=%<<<,%>>> fdm=marker fen ft=octave textwidth=80 tabstop=4 shiftwidth=4
+% vim settings modeline: vim: foldmarker=%<<<,%>>> fdm=marker fen ft=matlab textwidth=80 tabstop=4 shiftwidth=4

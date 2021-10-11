@@ -45,6 +45,6 @@ function replot_to_pdf(fnpart, unescape_bash=0)
         msg = ['cd ' DIR '; gnuplot "' nefnname '"']
         system(msg);
 % 
-endfunction
+end
 
-% vim modeline: vim: foldmarker=%<<<,%>>> fdm=marker fen ft=octave textwidth=1000
+% vim modeline: vim: foldmarker=%<<<,%>>> fdm=marker fen ft=matlab textwidth=1000

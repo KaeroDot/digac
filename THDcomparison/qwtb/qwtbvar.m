@@ -441,7 +441,7 @@ function job = prepare_var(algid, datain, datainvar, calcset) %<<<1
 end % function % prepare_var
 
 % function [cdatain varinfo] = generate_datain_cells_independent(varQ, varf, dim, dimsz, datain, datainvar); %<<<1
-% % XXX zastarale
+% % XXX old version
 % % XXX description
 %     % goes through all outputs from get_var_dimensions:
 %     for i = 1:length(varQ)
@@ -458,8 +458,8 @@ end % function % prepare_var
 %             varinfo.dim{end+1} = dim{i};  % save information
 %             varinfo.dimsz{end+1} = dimsz{i};  % save information
 %             varinfo.dimidx{end+1} = j;  % save information
-%         endfor % j = 1:dimsz{i}
-%     endfor % i = 1:length(varQ)
+%         end % j = 1:dimsz{i}
+%     end % i = 1:length(varQ)
 % 
 %     % XXX
 %     % This can generate some cells with same values (e.g. x goes 1:5 and normally is 3, y goes 10:15
@@ -571,7 +571,7 @@ function job = make_var(job) %<<<1
     if ~any(strcmp({alginfo.id}, job.algid))
         % it is not qwtb algorithm, but function
         is_qwtb_alg = 0;
-    endif
+    end
 
     % make variation calculation %<<<2
     id = tic();
@@ -588,7 +588,7 @@ function job = make_var(job) %<<<1
             else
                 % call user function:
                 [DO, DI, CS] = feval(job.algid, DI, job.calcset);
-            endif
+            end
             % do not check qwtb inputs somewhere?!! XXX
             if job.calcset.var.smalloutput
                 % remove large data from quantities (Q.c and Q.r)
@@ -1158,6 +1158,6 @@ function varargout = drawEllipse(varargin)
       varargout = {h};
   end
 
-endfunction
+end
 
-% vim settings modeline: vim: foldmarker=%<<<,%>>> fdm=marker fen ft=octave textwidth=80 tabstop=4 shiftwidth=4
+% vim settings modeline: vim: foldmarker=%<<<,%>>> fdm=marker fen ft=matlab textwidth=80 tabstop=4 shiftwidth=4

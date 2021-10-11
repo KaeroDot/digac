@@ -25,6 +25,6 @@ function l = iscokl() %<<<1
 [s, o] = system('uname -n');
 l = strcmpi(deblank(o), 'vsmp2');
 
-endfunction
+end
 
-% vim modeline: vim: foldmarker=%<<<,%>>> fdm=marker fen ft=octave textwidth=1000
+% vim modeline: vim: foldmarker=%<<<,%>>> fdm=marker fen ft=matlab textwidth=1000

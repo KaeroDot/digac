@@ -91,7 +91,7 @@ function alg_compare()
     DIvar.f.v = 50 + [-0.5:0.01:0.5];
     if dev DIvar.f.v = 50 + [-0.5:0.1:0.5]; end
     jobfn = processing(label, DI, DIvar, CS, 'f', 'signal frequency', 'THD (percent to main harm.)');
-endfunction
+end
 
 function jobfn = processing(label, DI, DIvar, CS, xvar, xlbl, ylbl) %<<<1
     CS.var.dir = [CS.unc '_' label];
@@ -117,7 +117,7 @@ function jobfn = processing(label, DI, DIvar, CS, xvar, xlbl, ylbl) %<<<1
     pltfn = fullfile(CS.var.dir, label);
     printplt(pltfn); replot_to_pdf(pltfn); plot_change_gnuplot_terminal(CS.var.dir);
 
-endfunction
+end
 
 
-% vim settings modeline: vim: foldmarker=%<<<,%>>> fdm=marker fen ft=octave textwidth=80 tabstop=4 shiftwidth=4
+% vim settings modeline: vim: foldmarker=%<<<,%>>> fdm=marker fen ft=matlab textwidth=80 tabstop=4 shiftwidth=4

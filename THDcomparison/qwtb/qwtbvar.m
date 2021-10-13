@@ -1012,11 +1012,11 @@ function msg = err_msg_gen(varargin) %<<<1
         % print out error message with nice frame. error itself will appear below
         % with this message again
         if errid > 0
-            disp( '┏━━━━━━━━━━━━')
-            disp( '┃')
-            disp(['┃ ' msg])
-            disp( '┃')
-            disp( '┗━━━━━━━━━━━━')
+            disp( '/============')
+            disp( '|')
+            disp(['| ' msg])
+            disp( '|')
+            disp( '\============')
         end % if
         msg = [msg suffix];
         % make empty output for zero errid:

@@ -1,8 +1,8 @@
-## Copyright (C) 2014 Martin Šíra
-##
+%% Copyright (C) 2014 Martin Šíra
+%%
 
 function printplt(filename)
-
+        
         % % find if running on supercomputer 'cokl', if so, set output terminal to x11:
         % iscokl=1;
         % if iscokl
@@ -10,9 +10,12 @@ function printplt(filename)
         % else
                 % terminal = "wxt";
         % endif
-
-        % print plot to plt:
-        drawnow ('postscript', "/dev/null", [filename '.plt'])
+        if isOctave
+            % print plot to plt:
+            drawnow ('postscript', "/dev/null", [filename '.plt'])
+        else
+            saveas(gcf, [filename '.png']);
+        end
 
 end
 
